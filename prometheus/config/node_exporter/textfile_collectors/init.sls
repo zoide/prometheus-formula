@@ -17,8 +17,8 @@ prometheus-node_exporter-textfile-dir:
   file.directory:
     - name: {{ prometheus.service.node_exporter.args.get('collector.textfile.directory') }}
     - mode: 755
-    - user: node_exporter
-    - group: node_exporter
+    - user: prometheus
+    - group: prometheus
     - makedirs: True
 
 {%- set states = [] %}
